@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+:root {
+    --background-color: #DFE2DB;
+    --highlight-color: #E3F09B;
+    --text-color: #191919;
+    --good-answer-color: #80ed63;
+    --wrong-answer-color: #ed637a;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 12px;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url('./fonts/Catamaran-Regular.ttf')  format('truetype');
+    src: url('./fonts/Catamaran-Black.ttf')  format('truetype');
+    src: url('./fonts/Catamaran-Bold.ttf')  format('truetype');
+    src: url('./fonts/Catamaran-Light.ttf')  format('truetype');
+    src: url('./fonts/Catamaran-Regular.ttf')  format('truetype');
+}
+
+h1 {
+    font-size: 4vh;
+}
+
+h2 {
+    font-size: 2vh;
+}
+
+input {
+    width: 20%;
+    background-color: white;
+    border: none;
+    padding: 7px;
+    font-size: 2vh;
+}
+
+button {
+    background-attachment: white;
+    margin: 10px;
+    padding: 7px 20px;
+}
+
+.--vertical_center
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.answer_block
+{
+    width: 600px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.answer_block--good {
+    background-color: var(--good-answer-color);
+}
+
+
+.answer_block--wrong {
+    background-color: var(--wrong-answer-color);
+}
+
+.proper_answer {
+    background-color: var(--highlight-color);
+    margin-top: 10px;
+}
+
+.wrong_answer {
+    background-color: var(--background-color);
+}
