@@ -66,6 +66,24 @@ button {
     -o-transform: translate(-50%, -50%);
 }
 
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #CED1CA;
+    display: flex;
+    flex-flow: row wrap;
+    color: red;
+}
+
+.header__title {
+    display: flex;
+}
+
+.header__navigation {
+    display: flex;
+    color: red;
+}
+
 .answer_block
 {
     width: 600px;

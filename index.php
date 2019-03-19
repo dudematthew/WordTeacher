@@ -1,5 +1,6 @@
 <?php session_start();
 
+    // Declaration of basic sessions
     $_SESSION["current_question_number"] = 0;
     $_SESSION["words"] = [];
     $_SESSION["correct_answers"] = 0;

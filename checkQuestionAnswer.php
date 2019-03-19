@@ -2,15 +2,17 @@
 
     include_once("./includes/header.php");
 
+    // Get the answer from answerQuestion.php
     $answer = (isset($_GET["answer"])) ? trim($_GET["answer"]) : null;
 
+    // Check if question is pending
     $is_pending = isset($_SESSION["is_pending_question"]) ? $_SESSION["is_pending_question"] : false;
     if ($is_pending == false) {
         header("location: ./generateQuestion.php");
         die("Nie ma oczekującego zapytania");
     }
 
-
+    // Check for main var setted
     if (is_null($answer)
         ||
             !isset($_SESSION["correct_answers"])
@@ -23,6 +25,7 @@
         die("wystąpił błąd danych");
     }
 
+    // Check question based on language direction
     if ($_SESSION["current_question_type"] == "left_to_right") {
         $current_answer = $_SESSION["current_right_word_syntax"];
     }
@@ -34,13 +37,19 @@
         die("wystąpił błąd danych");
     }
 
+    // Split answer madman to array
     $current_answer_madman = explode("/", $current_answer);
 
+    // Check if user answer matches one of
+    // the proper answers
     $is_proper_answer = false;
     foreach ($current_answer_madman as $key => $proper_answer) {
         if (trim($answer) == trim($proper_answer))
             $is_proper_answer = true;
     }
+
+    // Tell user if answer is
+    // proper or not
     $monit = "";
     if ($is_proper_answer) {
         $monit = "odpowiedź poprawna!";
@@ -57,10 +66,13 @@
         $block_class = "answer_block--wrong";
     }
 
+    // Reset question pending
+    // and go to next one
     $_SESSION["current_question_number"]  -= 1;
     $_SESSION["is_current_question_type_set"] = false;
     $_SESSION["is_pending_question"] = false;
 ?>
+
 <div class="--vertical_center">
     <div class="answer_block <?php print $block_class ?>">
         <?php print $monit ?>
