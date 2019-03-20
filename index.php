@@ -7,4 +7,4 @@
     $_SESSION["uncorrect_answers"] = 0;
     $_SESSION["is_current_question_type_set"] = false;
 
-    header("location: ./loadFile.php");
+    header("location: ./menu.php");

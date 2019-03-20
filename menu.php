@@ -1,4 +1,7 @@
-<?php include_once("./includes/header.php") ?>
+<?php
+    $title = "WordLearner v1.0a";
+    include_once("./includes/header.php")
+?>
 
 <body>
     <h1>WordLearner v1.0a</h1>

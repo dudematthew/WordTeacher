@@ -1,5 +1,6 @@
 <?php session_start();
 
+    
     include_once("./includes/header.php");
 
     // Get the answer from answerQuestion.php

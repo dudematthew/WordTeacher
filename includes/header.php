@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <!-- <header class="header">
-        <div class="header__title">WordLearner</div>
+    <header class="header">
+        <a href="./menu.php">
+            <div class="header__title --noselect">WordLearner</div>
+        </a>
         <nav class="header__navigation">
-            <div class="header__navigation__option">Menu</div>
-            <div class="header__navigation__option">Załaduj nowy plik</div>
-            <div class="header__navigation__option">Tutorial</div>
             <div class="header__navigation__option">Odpytaj mnie</div>
+            <div class="header__navigation__option">Załaduj nowy plik</div>
+            <div class="header__navigation__option">Jak korzystać?</div>
         </nav>
-    </header> -->
+    </header>
