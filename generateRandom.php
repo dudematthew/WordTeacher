@@ -1,5 +1,6 @@
 <?php session_start();
 
+    $title = "Odpytaj mnie";
     include_once("./includes/header.php");
 
     // Make new session of question sets and

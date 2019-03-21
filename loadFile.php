@@ -2,6 +2,12 @@
 
     setlocale(LC_COLLATE, "pl_PL");
 
+    // SEPARATE file upload handling
+
+    // if ($_FILES['file']['type'] == 'text/plain') // this file is TXT
+
+    // SEPARATE
+
     $file_contents = trim(file_get_contents("./angielski.txt", FILE_USE_INCLUDE_PATH));
     $wordsFileContent = explode("\n", $file_contents);
 
@@ -21,11 +27,11 @@
 
         if ($dash_count > 1 || $dash_count == 0)
         {
-            print "nieprawidłowa składnia w pliku w linijce "
+            print "<b style='color: red'>Nieprawidłowa składnia w pliku w linijce "
                 .($key + 1)
                 .": '"
                 .$value
-                ."'. Linijka nie zostanie użyta.<br />";
+                ."': Linijka została pominięta.</b><br />";
 
             unset($wordsFileContent[$key]);
             array_keys($wordsFileContent);

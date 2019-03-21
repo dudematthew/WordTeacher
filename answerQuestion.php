@@ -1,4 +1,6 @@
 <?php session_start();
+
+    $title = "Pytanie " . (($_SESSION["total_question_number"] ?? 0) - ($_SESSION["current_question_number"] ?? 0) + 1);
     include_once("./includes/header.php");
 
     $left_question = "";

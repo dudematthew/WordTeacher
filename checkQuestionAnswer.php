@@ -1,6 +1,6 @@
 <?php session_start();
 
-    
+    $title = "Odpowiedz na pytanie";
     include_once("./includes/header.php");
 
     // Get the answer from answerQuestion.php

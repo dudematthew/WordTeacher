@@ -8,6 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="./img/icon.ico" />
 </head>
 <body>
     <header class="header">
@@ -15,8 +16,14 @@
             <div class="header__title --noselect">WordLearner</div>
         </a>
         <nav class="header__navigation">
-            <div class="header__navigation__option">Odpytaj mnie</div>
-            <div class="header__navigation__option">Załaduj nowy plik</div>
-            <div class="header__navigation__option">Jak korzystać?</div>
+            <a href="./generateRandom.php">
+                <div class="header__navigation__option">Odpytaj mnie</div>
+            </a>
+            <a href="./loadFile.php">
+                <div class="header__navigation__option">Załaduj nowy plik</div>
+            </a>
+            <a href="./#">
+                <div class="header__navigation__option">Instrukcja</div>
+            </a>
         </nav>
     </header>

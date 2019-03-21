@@ -7,13 +7,14 @@
 
 :root {
     --background-color: #DFE2DB;
-    --highlight-color: #E3F09B;
+    --highlight-color: #E3F48D;
     --text-color: #191919;
     --good-answer-color: #80ed63;
     --wrong-answer-color: #ed637a;
 }
 
 body {
+    width: 100%;
     background-color: var(--background-color);
     color: var(--text-color);
     align-content: center;
@@ -38,11 +39,11 @@ h2 {
     font-size: 4vh;
 }
 
-input {
+input[type=text] {
     width: 20%;
     background-color: white;
     border: none;
-    padding: 7px;
+    padding: 7px 20px;
     font-size: 4vh;
 }
 
@@ -57,17 +58,33 @@ a {
     text-decoration: none;
 }
 
-.--vertical_center
-{
+textarea {
+    padding: 10px;
+    width: 50%;
+    height: 400px;
+    resize: none;
+}
+
+.--vertical_center {
     position: absolute;
     top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+    
+.--horizontal_center {
+    position: absolute;
     left: 50%;
     width: 100%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 
 .--noselect {
@@ -78,7 +95,19 @@ a {
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
-  }
+}
+
+.--custom_file_upload {
+    border: 1px dashed var(--text-color);
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.--custom_file_upload input[type="file"] {
+    display: none;
+    width: 0.1px;
+}
 
 .header {
     width: 100%;
@@ -93,19 +122,20 @@ a {
 .header__title {
     display: flex;
     line-height: 50px;
-    margin: 0 15px;
+    margin: 0 40px;
     font-size: 4vh;
+    font-weight: bold;
 }
 
 .header__navigation {
     display: flex;
     position: absolute;
-    right: 10px;
+    right: 40px;
 }
 
 .header__navigation__option {
     line-height: 50px;
-    margin: 0 10px;
+    margin: 0 30px;
 }
 
 .answer_block
@@ -133,4 +163,31 @@ a {
 
 .wrong_answer {
     background-color: var(--background-color);
+}
+
+.steps {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.steps__step {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+    align-content: center;
+    background-color: var(--highlight-color);
+    padding: 40px 20px;
+}
+
+.steps__step p {
+    font-size: 2.5vh;
+}
+
+.steps__step__img {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
 }
