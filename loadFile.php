@@ -2,16 +2,29 @@
 
     setlocale(LC_COLLATE, "pl_PL");
 
-    // SEPARATE file upload handling
+    if (!isset($_POST["upload_file"]) && !isset($_POST["upload_text"])) {
+        header("location: ./addFileToLoad.php?error=1");
+        die("Brak odebranych danych!");
+    }
+    else {
+        $file = $_POST["upload_file"] ?? null;
+        if (!is_null($file)) {
+            if ($_FILES['file']['type'] ?? null != 'text/plain') // this file is not TXT
+            {
+                header("loaction: ./addFileToLoad.php?error=2");
+                die("Odebrany plik nie jest plikiem tekstowym");
+            }
 
-    // if ($_FILES['file']['type'] == 'text/plain') // this file is TXT
+            $file_contents = trim(file_get_contents($file, FILE_USE_INCLUDE_PATH));
+        }
+        else {
+            $file_contents = $_POST["upload_text"];
+        }
+    }
 
-    // SEPARATE
-
-    $file_contents = trim(file_get_contents("./angielski.txt", FILE_USE_INCLUDE_PATH));
     $wordsFileContent = explode("\n", $file_contents);
 
-    print "<b>Załadowano plik. Pytania:</b> <br />";
+    print "<b>Załadowano! Pytania:</b> <br />";
 
     foreach ($wordsFileContent as $key => $value) {
         $value = trim($value);
