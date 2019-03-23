@@ -1,7 +1,18 @@
 <?php
     $title = "Załaduj nowy plik ze słówkami";
     include_once("./includes/header.php");
+
+    $error_input = $_GET["error"] ?? null;
+
+    $error_message = "";
+    if ($error_input == 1)
+        $error_message = "<p class='--error_text'>Proszę wpisać tekst, lub załadować plik.</p>";
+
+    if($error_input == 2)
+    $error_message = "<p class='--error_text'>Odebrany plik nie jest plikiem tekstowym.</p>";
 ?>
+
+<?php print $error_message; ?>
 
 <form action="./loadFile.php" method="post" enctype="multipart/form-data">
     <h3>Wybierz plik do załadowania:</h2>

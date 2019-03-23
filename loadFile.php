@@ -2,23 +2,26 @@
 
     setlocale(LC_COLLATE, "pl_PL");
 
-    if (!isset($_POST["upload_file"]) && !isset($_POST["upload_text"])) {
+    $file_name = $_FILES["upload_file"]["name"] ?? null;
+    $file_type = $_FILES['upload_file']['type'] ?? null;
+
+    if (($file_name == "") && !isset($_POST["upload_text"])) {
         header("location: ./addFileToLoad.php?error=1");
         die("Brak odebranych danych!");
     }
     else {
-        $file = $_POST["upload_file"] ?? null;
-        if (!is_null($file)) {
-            if ($_FILES['file']['type'] ?? null != 'text/plain') // this file is not TXT
-            {
-                header("loaction: ./addFileToLoad.php?error=2");
+        $file_path = $_FILES['upload_file']['tmp_name'] ?? null;
+
+        if (!is_null($file_path)) {
+            if ($file_type != 'text/plain') { // this file is not TXT
+                header("location: ./addFileToLoad.php?error=2");
                 die("Odebrany plik nie jest plikiem tekstowym");
             }
 
-            $file_contents = trim(file_get_contents($file, FILE_USE_INCLUDE_PATH));
+            $file_contents = trim(file_get_contents($file_path, FILE_USE_INCLUDE_PATH));
         }
         else {
-            $file_contents = $_POST["upload_text"];
+            $file_contents = $_POST["upload_text"] ?? null;
         }
     }
 

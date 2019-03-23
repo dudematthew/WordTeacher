@@ -25,12 +25,14 @@
 
         <input type="text" value="<?php print $left_question ?>" disabled />
          &rarr; 
-        <input type="text" placeholder="Tłumaczenie" name="answer" autocomplete="off" />
+        <input type="text" id="answer" placeholder="Tłumaczenie" name="answer" autocomplete="off" />
         <br />
         <button type="submit">Odpowiedz</button>
     </form>
 </div>
     
+<!-- focus on answer input -->
+<script> document.getElementById("answer").focus(); </script>
 
 </body>
 <?php include_once("./includes/footer.php");

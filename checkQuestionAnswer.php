@@ -2,6 +2,9 @@
 
     $title = "Odpowiedz na pytanie";
     include_once("./includes/header.php");
+    $current_question = (($_SESSION["current_question_type"] ?? null) == "right_to_left")
+        ? $_SESSION["current_right_word_syntax"] ?? null
+        : $_SESSION["current_left_word_syntax"] ?? null;
 
     // Get the answer from answerQuestion.php
     $answer = (isset($_GET["answer"])) ? trim($_GET["answer"]) : null;
@@ -58,10 +61,11 @@
         $block_class = "answer_block--good";
     }
     else {
-        $monit = "<h1>Odpowiedź niepoprawna!</h1> <br /> <h2>poprawna odpowiedź:</h2> <div class='proper_answer'>"
+        $monit = "<h2>Odpowiedź niepoprawna!</h2> <br /> <h3>Pytanie: " . $current_question . "</h3> <h3>poprawna odpowiedź:</h3> <div class='proper_answer'>"
             .$proper_answer
-            ."</div>twoja odpowiedź: "
-            .(($answer == "") ? "brak" : $answer);
+            ."</div><h3>twoja odpowiedź: "
+            .(($answer == "") ? "brak" : $answer)
+            ." </h3>";
             
         $_SESSION["uncorrect_answers"] += 1;
         $block_class = "answer_block--wrong";
@@ -79,6 +83,14 @@
         <?php print $monit ?>
     </div>
 
+    <script>
+        document.addEventListener("keydown", function (e) {
+        if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+            window.location.href = "./generateQuestion.php";
+        }
+});
+
+    </script>
     <a href="./generateQuestion.php"><button>Dalej</button></a>
 
 </div>

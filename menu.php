@@ -1,6 +1,6 @@
 <?php
     $title = "WordLearner v1.0a";
-    include_once("./includes/header.php")
+    include_once("./includes/header.php");
 ?>
 
 <body>

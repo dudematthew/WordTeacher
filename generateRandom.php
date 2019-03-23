@@ -13,6 +13,8 @@
     // (can't check the question without
     // pending var)
     $_SESSION["is_pending_question"] = false;
+    $_SESSION["correct_answers"] = 0;
+    $_SESSION["uncorrect_answers"] = 0;
 
     // Check the error from generateQuestion
     if(($_GET["error"] ?? 0) == 1)

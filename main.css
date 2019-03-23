@@ -40,7 +40,7 @@ h2 {
 }
 
 input[type=text] {
-    width: 20%;
+    width: 40%;
     background-color: white;
     border: none;
     padding: 7px 20px;
@@ -109,6 +109,10 @@ textarea {
     width: 0.1px;
 }
 
+.--error_text {
+    color: var(--wrong-answer-color);
+}
+
 .header {
     width: 100%;
     height: 50px;
@@ -131,6 +135,7 @@ textarea {
     display: flex;
     position: absolute;
     right: 40px;
+    white-space: nowrap;
 }
 
 .header__navigation__option {
@@ -159,6 +164,7 @@ textarea {
 .proper_answer {
     background-color: var(--highlight-color);
     margin-top: 10px;
+    font-size: 4vh;
 }
 
 .wrong_answer {

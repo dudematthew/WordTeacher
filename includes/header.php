@@ -16,10 +16,13 @@
             <div class="header__title --noselect">WordLearner</div>
         </a>
         <nav class="header__navigation">
+            <a href="#">
+                <div class="header__navigation__option">Ucz mnie</div>
+            </a>
             <a href="./generateRandom.php">
                 <div class="header__navigation__option">Odpytaj mnie</div>
             </a>
-            <a href="./loadFile.php">
+            <a href="./addFileToLoad.php">
                 <div class="header__navigation__option">Załaduj nowy plik</div>
             </a>
             <a href="./#">
