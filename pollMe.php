@@ -1,6 +1,6 @@
 <?php session_start();
 
-    $title = "Odpytaj mnie";
+    $title = "Przepytaj mnie";
     include_once("./includes/header.php");
 
     // Make new session of question sets and
@@ -11,18 +11,21 @@
     // User is updating the file - reset
     // pending question
     // (can't check the question without
-    // pending var)
+    // pending variable)
     $_SESSION["is_pending_question"] = false;
     $_SESSION["correct_answers"] = 0;
     $_SESSION["uncorrect_answers"] = 0;
 
     // Check the error from generateQuestion
+    $error_message = "";
     if(($_GET["error"] ?? 0) == 1)
-        print "Proszę podać liczbę większą od zera!";
+        $error_message = "<p class='--error_text'>Proszę podać liczbę większą od zera!</p>";
 ?>
 <div class="--vertical_center">
+    <?php print $error_message; ?>
     <form action="generateQuestion.php" method="get">
         <input type="text" name="question_number" placeholder="Ilość pytań...">
+        <br />
         <button type="submit">Odpytaj mnie</button>
     </form>
 </div>

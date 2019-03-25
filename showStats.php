@@ -21,6 +21,6 @@
 
 ?>
 <br />
-<a href="./generateRandom.php">Powrót do menu</a>
+<a href="./menu.php">Powrót do menu</a>
 
 <?php include_once("./includes/footer.php");

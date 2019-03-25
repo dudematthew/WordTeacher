@@ -63,6 +63,7 @@ textarea {
     width: 50%;
     height: 400px;
     resize: none;
+    font-size: 3vh;
 }
 
 .--vertical_center {
@@ -111,6 +112,14 @@ textarea {
 
 .--error_text {
     color: var(--wrong-answer-color);
+}
+
+.--info_text {
+    font-size: 1.6vh !important;
+}
+
+.--info_text a {
+    color: #ed637a;
 }
 
 .header {
@@ -180,7 +189,7 @@ textarea {
 
 .steps__step {
     width: 300px;
-    height: 400px;
+    height: 420px;
     margin: 20px;
     text-align: center;
     align-content: center;

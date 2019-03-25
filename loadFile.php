@@ -66,4 +66,4 @@
 
     ?>
 
-    <a href="./generateRandom.php">Kontynuuj</a>
+    <a href="./menu.php">Kontynuuj</a>

@@ -1,0 +1,12 @@
+Nauka
+    tryb ograniczonego wkuwania:
+        użytkownik wprowadza liczbę pytań które ma zadać mu program 
+        opcje do włączenia:
+            - opcja przepisywania:   
+                użytkownik musi przepisać prawidłową odpowiedź w przypadku
+                nieprawidłowej odpowiedzi aby przejść do następnego pytania
+    tryb progresywnego wkuwania:
+        pytania, na które odpowiedziano poprawnie zostają odjęte od puli
+        pytania są zadawane tak długo aż nie zostanie ani jedno
+
+        
