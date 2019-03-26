@@ -7,7 +7,7 @@
     <form action="./createRandomQuestionSet.php" method="get">
         <div class="popover__wrapper">
             <a href="#">
-                <h2 class="popover__title">Tryb ograniczonego wkuwania</label>
+                <h2>Tryb ograniczonego wkuwania</label>
             </a>
             <div class="popover__content">
                 Ograniczona przez użytkownika ilość pytań.
@@ -19,7 +19,7 @@
         <div class="popover__wrapper">
             <input type="checkbox" name="rewrite_option" />
             <a href="#">
-                <label class="popover__title">Tryb przepisywania</label>
+                <label>Tryb przepisywania</label>
             </a>
             <div class="popover__content">
                 W przypadku nieprawidłowej
@@ -36,7 +36,7 @@
 
     <div class="popover__wrapper">
         <a href="#">
-            <h2 class="popover__title">Tryb progresywnego wkuwania</label>
+            <h2>Tryb progresywnego wkuwania</label>
         </a>
         <div class="popover__content">
             Pytania, na które odpowiedziano
@@ -49,7 +49,7 @@
         <div class="popover__wrapper">
             <input type="checkbox" name="rewrite_option" />
             <a href="#">
-                <label class="popover__title">Tryb przepisywania</label>
+                <label>Tryb przepisywania</label>
             </a>
             <div class="popover__content">
                 W przypadku nieprawidłowej
