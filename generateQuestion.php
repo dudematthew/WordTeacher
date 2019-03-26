@@ -13,7 +13,9 @@
     }
 
      // Set from session or overwrite from get
-     $question_number = (isset($_GET["question_number"])) ? $_GET["question_number"] : $_SESSION["current_question_number"];
+     $question_number = (isset($_GET["question_number"]))
+        ? $_GET["question_number"]
+        : $_SESSION["current_question_number"];
 
     // Take to the stats if runs out of question numbers
     if ($question_number <= 0)

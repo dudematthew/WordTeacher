@@ -45,6 +45,16 @@ input[type=text] {
     border: none;
     padding: 7px 20px;
     font-size: 4vh;
+    margin: 10px;
+}
+
+input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin: 5px;
+    vertical-align: bottom;
+    margin-bottom: 10px;
 }
 
 button {
@@ -63,6 +73,10 @@ textarea {
     width: 50%;
     height: 400px;
     resize: none;
+    font-size: 3vh;
+}
+
+label {
     font-size: 3vh;
 }
 
@@ -116,10 +130,16 @@ textarea {
 
 .--info_text {
     font-size: 1.6vh !important;
+    margin: 5px;
 }
 
 .--info_text a {
     color: #ed637a;
+}
+
+.--no_break_children * {
+    white-space: nowrap;
+    display: inline;
 }
 
 .header {
@@ -206,3 +226,84 @@ textarea {
     height: auto;
     margin: 20px 0;
 }
+
+/* Popover styling */
+  
+  .popover__title {
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration: none;
+    color: rgb(228, 68, 68);
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .popover__title:before {
+    content:"?";
+    position: absolute;
+    top: .25em;
+    left:0;
+    text-indent: 0;
+    display:block;
+    width:1em;
+    height: 1em;
+    padding: 5px;
+    text-align:center;
+    color: black;
+    font-weight:bold;
+    font-size:1em;
+    line-height:1em;
+    filter: brightness(150%);
+    dmargin-left: .25em;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    -webkit-filter: brightness(150%);
+}
+  
+  .popover__wrapper {
+    position: relative;
+    margin-top: 1.5rem;
+    display: inline-block;
+  }
+  .popover__content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    margin-top: 30px;
+    transform: translate(0, 10px);
+    background-color: #bfbfbf;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: 400px;
+    height: auto;
+    -webkit-transform: translate(0, 10px);
+    -moz-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -o-transform: translate(0, 10px);
+}
+  .popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(95.5% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #bfbfbf transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+  .popover__wrapper:hover .popover__content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  }
+  .popover__message {
+    text-align: center;
+  }

@@ -2,22 +2,26 @@
 
     include_once("./includes/header.php");
 
-    $percent_score = floor(($_SESSION["correct_answers"] * 100) / ($_SESSION["correct_answers"] + $_SESSION["uncorrect_answers"])); 
+    $percent_score = floor(($_SESSION["correct_answers"] * 100)
+        / ($_SESSION["correct_answers"]
+        + $_SESSION["uncorrect_answers"])); 
 
     if ($_SESSION["uncorrect_answers"] == 0 && $_SESSION["correct_answers"] == 0) {
         header("index.php");
         die("wystąpił błąd danych");
     }
 
-    print "niepoprawnych odpowiedzi: "
-    .$_SESSION["uncorrect_answers"];
+    print "<p>Niepoprawnych odpowiedzi: "
+    .$_SESSION["uncorrect_answers"]
+    ."</p>";
 
-    print "<br />poprawnych odpowiedzi: "
-    .$_SESSION["correct_answers"];
+    print "<br /><p>poprawnych odpowiedzi: "
+    .$_SESSION["correct_answers"]
+    ."</p>";
 
-    print "<br />wynik: "
+    print "<br /><p>wynik: "
         .$percent_score
-        ."%";
+        ."%</p>";
 
 ?>
 <br />

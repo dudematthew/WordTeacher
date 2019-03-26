@@ -21,7 +21,7 @@
             $file_contents = trim(file_get_contents($file_path, FILE_USE_INCLUDE_PATH));
         }
         else {
-            $file_contents = $_POST["upload_text"] ?? null;
+            $file_contents = trim($_POST["upload_text"] ?? null);
         }
     }
 
