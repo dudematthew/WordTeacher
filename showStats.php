@@ -1,5 +1,6 @@
-<?php session_start();
+<?php if (session_id() == "") session_start();
 
+    include_once("./includes/checkIfWordSetLoaded.php");
     include_once("./includes/header.php");
 
     $percent_score = floor(($_SESSION["correct_answers"] * 100)
@@ -25,6 +26,7 @@
 
 ?>
 <br />
-<a href="./menu.php">Powrót do menu</a>
+<a href="./menu.php"><button>Powrót do menu</button></a>
+
 
 <?php include_once("./includes/footer.php");

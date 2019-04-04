@@ -1,10 +1,15 @@
-<?php session_start();
+<?php if (session_id() == "") session_start();
 
-    $title = "Odpowiedz na pytanie";
+    include_once("./includes/checkIfWordSetLoaded.php");
+
+
+    $title = "Odpowiedź na pytanie";
     include_once("./includes/header.php");
     $current_question = (($_SESSION["current_question_type"] ?? null) == "right_to_left")
         ? $_SESSION["current_right_word_syntax"] ?? null
         : $_SESSION["current_left_word_syntax"] ?? null;
+
+    $current_question_number = $_SESSION["current_question_number"] ?? null;
 
     // Get the answer from answerQuestion.php
     $answer = (isset($_GET["answer"])) ? trim($_GET["answer"]) : null;
@@ -16,15 +21,16 @@
         die("Nie ma oczekującego zapytania");
     }
 
-    // Check for main var setted
-    if (is_null($answer)
+    // Check if main var setted
+    if (
+            is_null($answer)
         ||
             !isset($_SESSION["correct_answers"])
         ||
             !isset($_SESSION["uncorrect_answers"])
         ||
             !isset($_SESSION["is_current_question_type_set"])
-        ) {
+    ) {
         header("location: index.php");
         die("wystąpił błąd danych");
     }
@@ -59,6 +65,15 @@
         $monit = "odpowiedź poprawna!";
         $_SESSION["correct_answers"] += 1;
         $block_class = "answer_block--good";
+
+        if ($_SESSION["current_learning_type"] == "progressive") {
+            unset($_SESSION["shuffled_words"][$current_question_number]);
+            $temp_arr = [];
+            foreach($_SESSION["shuffled_words"] as $value) {
+                $temp_arr[] = $value;
+            }
+            $_SESSION["shuffled_words"] = $temp_arr;
+        }
     }
     else {
         $monit = "<h2>Odpowiedź niepoprawna!</h2> <br /> <h3>Pytanie: " . $current_question . "</h3> <h3>poprawna odpowiedź:</h3> <div class='proper_answer'>"
@@ -73,7 +88,13 @@
 
     // Reset question pending
     // and go to next one
-    $_SESSION["current_question_number"] -= 1;
+    if ($_SESSION["current_learning_type"] != "progressive") {
+        $_SESSION["current_question_number"] -= 1;
+    }
+    else if ($_SESSION["current_learning_type"] == "progressive") {
+        $_SESSION["current_question_number"] += 1;
+    }
+    
     $_SESSION["is_current_question_type_set"] = false;
     $_SESSION["is_pending_question"] = false;
 ?>

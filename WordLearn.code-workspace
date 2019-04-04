@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"todohighlight.keywords": [
+			{
+				"text": "// NOTE: ",
+				"color": "#e50069",
+				"backgroundColor": "#133e58",
+				"overviewRulerColor": "",
+				"borderRadius": "5px",
+				"border": "1px solid #e50069"
+			},
+			{
+				"text": "// TODO: ",
+				"color": "yellow",
+				"overviewRulerColor": "",
+				"border": "1px solid yellow",
+				"borderRadius": "2px",
+				"backgroundColor": "#274928",
+				"isWholeLine": true,
+			},
+			{
+				"text": "// WARNING: ",
+				"color": "tomato",
+				"border": "1px solid tomato",
+				"borderRadius": "2px",
+				"backgroundColor": "null",
+			},
+			{
+				"text": "// SEPARATE",
+				"color": "whitesmoke",
+				"border": "1px solid whitesmoke",
+				"borderRadius": "2px",
+				"backgroundColor": "",
+				"isWholeLine": true,
+			},
+		],
+	}
+}

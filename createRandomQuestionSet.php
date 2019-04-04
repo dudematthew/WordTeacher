@@ -1,10 +1,14 @@
-<?php session_start();
+<?php if (session_id() == "") session_start();
 
+    include_once("./includes/checkIfWordSetLoaded.php");
+
+    // Set basic variables
     $option_learning_type = $_GET["learning_type"] ?? null;
     $option_rewrite_mode = $_GET["rewrite_option"] ?? null;
     $option_questions_amount = $_GET["questions_amount"] ?? null;
     $operation_type = $_GET["operation_type"] ?? null;
 
+    // SEPARATE Validate data
     if ($operation_type != "teach" && $operation_type != "poll")
     {
         header("./menu.php");
@@ -29,11 +33,10 @@
             die("wystąpił błąd");
         }
     }
+    // SEPARATE
 
     // Set from session or overwrite from get
-    $_SESSION["current_question_number"] =
-        $_GET["questions_amount"]
-        ?? $_SESSION["current_question_number"];
+    $_SESSION["current_question_number"] = $_GET["questions_amount"] ?? 0;
 
     if ($option_learning_type == "progressive")
         $_SESSION["total_question_number"] = 1;
@@ -50,11 +53,15 @@
     // Make new session of question sets
     $_SESSION["shuffled_words"] = $_SESSION["words"];
 
-    // If required question amount is grater
+    // If required question amount is greater
     // than avaible question amount
     // extend it in a way that eliminates
     // repeats
-    if ($option_questions_amount > count($_SESSION["shuffled_words"])) {
+    if (
+            $option_questions_amount > count($_SESSION["shuffled_words"])
+        &&
+            $option_learning_type != "progressive"
+    ) {
         $i_local = 0;
         while (count($_SESSION["shuffled_words"]) < $option_questions_amount)
         {
@@ -77,6 +84,7 @@
     $_SESSION["is_pending_question"] = false;
     $_SESSION["correct_answers"] = 0;
     $_SESSION["uncorrect_answers"] = 0;
+    $_SESSION["title_question_number"] = 0;
 
     header("location: ./generateQuestion.php");
 ?>

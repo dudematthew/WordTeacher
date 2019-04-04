@@ -1,4 +1,4 @@
-<?php session_start();
+<?php if (session_id() == "") session_start();
 
     $title = "Przepytaj mnie";
     include_once("./includes/header.php");
