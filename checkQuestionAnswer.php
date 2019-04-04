@@ -73,7 +73,7 @@
 
     // Reset question pending
     // and go to next one
-    $_SESSION["current_question_number"]  -= 1;
+    $_SESSION["current_question_number"] -= 1;
     $_SESSION["is_current_question_type_set"] = false;
     $_SESSION["is_pending_question"] = false;
 ?>
@@ -85,11 +85,10 @@
 
     <script>
         document.addEventListener("keydown", function (e) {
-        if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
-            window.location.href = "./generateQuestion.php";
-        }
-});
-
+            if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+                window.location.href = "./generateQuestion.php";
+            }
+        });
     </script>
     <a href="./generateQuestion.php"><button>Dalej</button></a>
 

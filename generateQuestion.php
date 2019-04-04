@@ -2,55 +2,24 @@
 
     $left_question = $right_question = "";
     $_SESSION["is_pending_question"] = $_SESSION["is_pending_question"] ?? false;
+    $question_number = $_SESSION["current_question_number"] ?? null;
 
-    // Go back to GenerateRandom.php if user inputs
-    // number lower than 1
-    if (isset($_GET["question_number"])) {
-        if ($_GET["question_number"] <= 0) {
-            header("location: ./generateRandom.php?error=1");
-            die("wystąpił błąd.");
-        }
-    }
-
-     // Set from session or overwrite from get
-     $question_number = (isset($_GET["question_number"]))
-        ? $_GET["question_number"]
-        : $_SESSION["current_question_number"];
+    // Panic and go back to index
+    if (!isset($_SESSION["shuffled_words"]))
+        header("location: index.php");
 
     // Take to the stats if runs out of question numbers
     if ($question_number <= 0)
     {
-        header("location: showStats.php");
+        header("location: ./showStats.php");
         die();
     }
 
-    // Works if question is pending
+    // Works if question is not pending
     if ($_SESSION["is_pending_question"] == false) { 
 
-        // If data sended by GET put it to
-        // session to save maximum number of questions
-        if (isset($_GET["question_number"])) {
-            $_SESSION["total_question_number"] = $_GET["question_number"];
-        }
-
-        // If not set to get and session go back
-        if (is_null($question_number))
-            header("location: ./index.php");
-
-        // Update current question number by
-        // current session or GET
-        $_SESSION["current_question_number"] = $question_number;
-
-        // SEPARATE  Take question based on number - this algorithm is still in prod.
-        if ($question_number <= count($_SESSION["shuffled_words"])) {
-
-            $current_question = $_SESSION["shuffled_words"][$question_number - 1];
-        }
-        else {
-            shuffle($_SESSION["shuffled_words"]);
-            $current_question = $_SESSION["shuffled_words"][0];
-        }
-        // SEPARATE
+        // Get current question from question set
+        $current_question = $_SESSION["shuffled_words"][$question_number - 1];
 
         // Split question by "-"
         $exploded_question = explode("-", $current_question);

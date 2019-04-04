@@ -25,7 +25,7 @@
             <a href="./addFileToLoad.php">
                 <div class="header__navigation__option">Załaduj nowy plik</div>
             </a>
-            <a href="./#">
+            <a href="./textSyntaxTutorial">
                 <div class="header__navigation__option">Instrukcja</div>
             </a>
         </nav>

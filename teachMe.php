@@ -45,7 +45,7 @@
             pula nie zostanie opróżniona.
         </div>
     </div>
-    <form action="" method="get">
+    <form action="./createRandomQuestionSet.php" method="get">
         <div class="popover__wrapper">
             <input type="checkbox" name="rewrite_option" />
             <a href="#">
