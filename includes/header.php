@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <a href="./menu.php">
-            <div class="header__title --noselect">WordLearner</div>
+            <div class="header__title --noselect">WordTeacher</div>
         </a>
         <nav class="header__navigation">
             <a href="./teachMe.php">
