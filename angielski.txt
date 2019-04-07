@@ -45,7 +45,7 @@ shabby - zaniedbany
 sleeveless - bez rękawów
 smart / elegant - elegancki
 stretchy - rozciągliwy / elastyczny
-striped - w paski
+striped - - w paski
 stylish - stylowy
 tight / tight fitting - ciasny
 trendy - modny
@@ -53,7 +53,7 @@ unique - unikalny
 vintage - vintage / staromodny
 blend into the crowd - wmieszać się w tłum
 conform to a style - dopasować się do stylu
-express sb's individuality - być wyrazem czyjejś indywidualności
+express somebody's individuality - być wyrazem czyjejś indywidualności
 switch allegiance - zmienić przynależność
 glance - rzucić okiem
 glare - wpatrywać się ze złością
@@ -65,7 +65,7 @@ hiss - syczeć
 moan - jęczeć / narzekać
 mumble / mutter - mamrotać
 shout - krzyczeć
-stutter - jękać się
+stutter - jąkać się
 whisper - szeptać
 yell - wrzeszczeć
 bang your fist - uderzyć pięścią
@@ -78,7 +78,7 @@ hide your face in your hands - ukryć twarz w dłoniach
 lean back - odchylać się / opierać się / rozpierać się
 posture - postawa
 purse your lips - zacisnąć usta
-raise your eyebrows - unieść brwi ze zdumienia
+raise your eyebrows - unieść brwi
 shake your head - potrząsnąć głową
 shrug your shoulders - wzruszyć ramionami
 stand with your feet apart - stać na szeroko rozstawionych nogach
@@ -97,17 +97,16 @@ caring - troskliwy
 conceited - zarozumiały
 conscientous - sumienny
 cynical - cyniczny
-honest - uczciwy
+honest - uczciwy / szczery
 dishonest - nieuczciwy
 dull - nudny
 entertaining - zabawny / wesoły
 flexible - elastyczny
 generous - hojny
 gullible - łatwowierny
-humble - skromny
+humble / modest - skromny
 mature - dojrzały
 immature - niedojrzały
-modest - skromy
 immodest - nieskromny
 discreet - dyskretny
 indiscreet - niedyskretny
@@ -126,3 +125,72 @@ rebellious - buntowniczy
 reserved - powściągliwy
 self centred - egocentryczny
 self confident / self assured - pewny siebie
+rude - nieuprzejmy
+self centred - egocentryczny
+self confident / self assured - pewny siebie
+self conscious - nieśmiały / skrępowany
+sensible / reasonable - rozsądny
+strict - surowy
+stubborn - uparty
+sympathetic - współczujący
+trustworthy - godny zaufania
+unscrupolus - pozbawiony skrupółów
+vain - próżny
+affection - uczucie / sympatia
+anxiety - niepokój
+anxious - niespokojny
+apprehensive - pełen obaw
+ashamed - zawstydzony
+astonished - zdziwiony
+bewildered - skonsternowany / oszołomiony
+depressed - przygnębiony / smutny
+elated - uszczęśliwiony
+exhausted - wyczerpany
+gloomy - ponury
+heartbroken - zrozpaczony / załamany
+in a bad temper - zirytowany
+indifferent - obojętny
+long for - tęsknić
+lose your temper - stracić panowanie nad sobą
+miserable - nieszczęśliwy
+moved - wzruszony
+overhelmed - przytłoczony
+terrified / petrified - przerażony
+thrilled - bardzo podekscytowany
+be down in the dumps - mieć chandrę / być bardzo smutnym
+be over the moon - nie posiadać się ze szczęścia
+get butterflies in your stomach - mieć tremę
+wake up in a cold sweat - obudzić się zlanym zimnym potem
+adjust to - dostosować się do
+admire - podziwiać
+attitude - postawa / nastawienie
+be passionate about something  - pasjonować się czymś
+belief - pogląd / przekonanie
+content with - zadowolony z
+convinced of - przekonany o
+dismiss - odrzucić
+dismissive - lekceważący
+have a go at something - spróbować coś zrobić
+indifferent to - obojętny na
+insist on - nalegać na
+regard something as - uważać coś za
+take an interest in something - zainteresować się czymś
+take pride in something - szczycić się czymś
+assume that - zakładać że
+assumption - założenie / przypuszczenie
+come to somebody's mind - przyjść komuś na myśl
+compliment somebody on something - gratulować komuś czegoś
+confront something - stawiać czemuś czoło
+gain somebody's confidence - zyskać czyjeś zaufanie
+get your head around something - zrozumieć i zaakceptować coś
+go to one's head - uderzyć do głowy
+have a good head for something - mieć głowę do czegoś
+make up your mind - zdecydować się
+off the top of your head - bez zastanowienia
+perceive - postrzegać / dostrzegać
+recall / recollect - przypomnieć swobodnie
+regard something as - uważać coś za
+ethical dilemma - dylemat etyczny
+in vitro fertilisation - zapłodnienie in vitro
+organ donation - dawstwo organów
+same sex / gay marriage - małżeństwo homoseksualne

@@ -8,15 +8,25 @@
 
     <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="./img/icon.ico" />
 </head>
 <body>
     <header class="header">
         <a href="./menu.php">
-            <div class="header__title --noselect">WordLearner</div>
+            <div class="header__title --noselect">WordTeacher</div>
         </a>
         <nav class="header__navigation">
-            <div class="header__navigation__option">Odpytaj mnie</div>
-            <div class="header__navigation__option">Załaduj nowy plik</div>
-            <div class="header__navigation__option">Jak korzystać?</div>
+            <a href="./teachMe.php">
+                <div class="header__navigation__option">Ucz mnie</div>
+            </a>
+            <a href="./pollMe.php">
+                <div class="header__navigation__option">Przepytaj mnie</div>
+            </a>
+            <a href="./addFileToLoad.php">
+                <div class="header__navigation__option">Załaduj nowy plik</div>
+            </a>
+            <a href="./textSyntaxTutorial">
+                <div class="header__navigation__option">Instrukcja budowy składni</div>
+            </a>
         </nav>
     </header>

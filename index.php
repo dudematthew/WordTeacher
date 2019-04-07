@@ -1,4 +1,4 @@
-<?php session_start();
+<?php if (session_id() == "") session_start();
 
     // Declaration of basic sessions
     $_SESSION["current_question_number"] = 0;
