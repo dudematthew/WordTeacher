@@ -5,9 +5,19 @@
 
     $title = "Odpowiedź na pytanie";
     include_once("./includes/header.php");
+
+    // Check question based on language direction 
     $current_question = (($_SESSION["current_question_type"] ?? null) == "right_to_left")
         ? $_SESSION["current_right_word_syntax"] ?? null
         : $_SESSION["current_left_word_syntax"] ?? null;
+
+    // Check answer based on language direction (use it in checkRewrite.php)
+    $current_answer = (($_SESSION["current_question_type"] ?? null) == "left_to_right")
+        ? $_SESSION["current_right_word_syntax"] ?? null
+        : $_SESSION["current_left_word_syntax"] ?? null;
+
+    $_SESSION["current_answer"] = $current_answer;
+    $_SESSION["current_question"] = $current_question;
 
     $current_question_number = $_SESSION["current_question_number"] ?? null;
 
@@ -19,6 +29,12 @@
     if ($is_pending == false) {
         header("location: ./generateQuestion.php");
         die("Nie ma oczekującego zapytania");
+    }
+
+    if ($_SESSION["waiting_for_rewrite"]) {
+        // header("location: ./checkRewrite.php");
+        print "2";
+        die("Wystąpił błąd przekierowania.");
     }
 
     // Check if main var setted
@@ -35,17 +51,7 @@
         die("wystąpił błąd danych");
     }
 
-    // Check question based on language direction
-    if ($_SESSION["current_question_type"] == "left_to_right") {
-        $current_answer = $_SESSION["current_right_word_syntax"];
-    }
-    else if ($_SESSION["current_question_type"] == "right_to_left") {
-        $current_answer = $_SESSION["current_left_word_syntax"];
-    }
-    else {
-        header("location: index.php");
-        die("wystąpił błąd danych");
-    }
+    
 
     // Split answer madman to array
     $current_answer_madman = explode("/", $current_answer);
@@ -81,7 +87,12 @@
             ."</div><h3>twoja odpowiedź: "
             .(($answer == "") ? "brak" : $answer)
             ." </h3>";
-            
+
+        $block_class = "answer_block--wrong";
+
+        if ($_SESSION["current_option_rewrite_mode"] ?? null)
+            $_SESSION["waiting_for_rewrite"] = true;
+        
         $_SESSION["uncorrect_answers"] += 1;
         $block_class = "answer_block--wrong";
     }
@@ -107,11 +118,11 @@
     <script>
         document.addEventListener("keydown", function (e) {
             if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
-                window.location.href = "./generateQuestion.php";
+                window.location.href = "./checkRewrite.php";
             }
         });
     </script>
-    <a href="./generateQuestion.php"><button>Dalej</button></a>
+    <a href="./checkRewrite.php"><button>Dalej</button></a>
 
 </div>
 

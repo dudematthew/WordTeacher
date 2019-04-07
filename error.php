@@ -7,7 +7,8 @@
     $error_message = "Wystąpił błąd";
     switch ($error_number) {
         case 0:
-            $error_message = "Nie znaleziono odpowiedniego zestawu danych. Proszę załadować plik lub wpisać dane w sekcji <a href='./addFileToLoad.php' class='--text_link'>Załaduj nowy plik</a>";
+            $error_message = 
+                "Nie znaleziono odpowiedniego zestawu danych. Proszę załadować plik lub wpisać dane w sekcji <a href='./addFileToLoad.php' class='--text_link'>Załaduj nowy plik</a>";
     }
 
 ?>

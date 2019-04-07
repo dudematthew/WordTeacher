@@ -62,6 +62,7 @@
             
     }
 
+    $_SESSION["words_amount"] = count($wordsFileContent);
     $_SESSION["words"] = $wordsFileContent;
 
     ?>

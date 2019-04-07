@@ -146,6 +146,11 @@ label {
     color: #4C4C4C;
 }
 
+.--highlight_text {
+    background-color: var(--highlight-color) !important;
+    text-decoration: bold;
+}
+
 .header {
     width: 100%;
     height: 50px;

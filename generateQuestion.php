@@ -37,11 +37,11 @@
     if ($_SESSION["is_pending_question"] == false) { 
 
         if ($question_number >= count($_SESSION["shuffled_words"]))
-            $_SESSION["current_question_number"] = $question_number = 0;
+            $_SESSION["current_question_number"] = $question_number;
 
         // Get current question from question set
-        if ($_SESSION["current_learning_type"] ?? null != "progressive")
-            $current_question = $_SESSION["shuffled_words"][$question_number];
+        if (($_SESSION["current_learning_type"] ?? null) != "progressive")
+            $current_question = $_SESSION["shuffled_words"][$question_number - 1];
         else 
             $current_question = $_SESSION["shuffled_words"][$question_number];
 
@@ -78,7 +78,11 @@
     // Set the question to pending = block
     // modifications of the question
     $_SESSION["is_pending_question"] = true;
+    $_SESSION["waiting_for_rewrite"] = false;
+
+    ($_SESSION["current_question_number"]);
 
     header("location: answerQuestion.php");
+    die("Wystąpił błąd przekierowania.");
 
 ?>

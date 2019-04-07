@@ -1,7 +1,5 @@
 <?php if (session_id() == "") session_start();
 
-    include_once("./includes/checkIfWordSetLoaded.php");
-
 
     $title_question_number = $_SESSION["title_question_number"];
 
@@ -10,6 +8,7 @@
 
     include_once("./includes/header.php");
     
+    include_once("./includes/checkIfWordSetLoaded.php");
     
 
     $left_question = "";
@@ -26,7 +25,6 @@
         header("location: index.php");
         die("wystąpił błąd danych");
     }
-    
 ?>
 <div class="--vertical_center">
     <h2>Pytanie nr. <?php print $title_question_number ?></h2> 
