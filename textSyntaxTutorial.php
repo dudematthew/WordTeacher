@@ -7,7 +7,7 @@
     <h2>Jak układać słówka, żeby aplikacja zrozumiała</h2>
     <br>
     <h3>
-        W sekcji <a href="./loadFile.php" class="--text_link">Załaduj nowy plik</a> możesz przesłać plik zawierający słówka do nauczenia, lub po prostu wpisać je w okienko. W obu przypadkach tekst musi być odpowiednio sformatowany. Jest to stosunkowo proste do osiągnięcia:
+        W sekcji <a href="./addFileToLoad.php" class="--text_link">Załaduj nowy plik</a> możesz przesłać plik zawierający słówka do nauczenia, lub po prostu wpisać je w okienko. W obu przypadkach tekst musi być odpowiednio sformatowany. Jest to stosunkowo proste do osiągnięcia:
     </h3>
     <br>
     <img src="./img/sample_text_no_slash.png" alt="Przykładowe słówka" />
@@ -23,7 +23,7 @@
     <h3>
         Ukośniki mogą się znajdować po obu stronach. Podczas odpowiadania można wpisać tylko jedno z dostępnych znaczeń w dowolnym wyborze, a aplikacja zinterpretuje odpowiedź jako poprawną.
         <br>
-        Spróbuj teraz <a href="./loadFile.php" class="--text_link">Załadować nowy plik</a>. Miłej nauki.
+        Spróbuj teraz <a href="./addFileToLoad.php" class="--text_link">Załadować nowy plik</a>. Miłej nauki.
     </h3>
     <br><br><br><br>
 </div>
