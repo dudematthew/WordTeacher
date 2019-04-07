@@ -1,9 +1,9 @@
 <?php
-    $title = "WordLearner v1.3a";
+    $title = "WordLearner v1.4a";
     include_once("./includes/header.php");
 ?>
 
-    <h1>WordLearner v1.3a</h1>
+    <h1>WordLearner v1.4a</h1>
     <h2>Nauka słówek łatwiejsza o połowę</h2>
 
     <div class="steps">

@@ -68,6 +68,6 @@
 
     ?>
 
-    <a href="./menu.php"><button>Kontynuuj</button></a>
+    <a href="./menu.php"><button>Kontynuuj</button></a><br>
 
     <?php include_once("./includes/footer.php");
