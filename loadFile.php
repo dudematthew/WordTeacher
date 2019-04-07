@@ -1,6 +1,7 @@
  <?php session_start();
 
     setlocale(LC_COLLATE, "pl_PL");
+    include_once("./includes/header.php");
 
     $file_name = $_FILES["upload_file"]["name"] ?? null;
     $file_type = $_FILES['upload_file']['type'] ?? null;
@@ -27,7 +28,7 @@
 
     $wordsFileContent = explode("\n", $file_contents);
 
-    print "<b>Załadowano! Pytania:</b> <br />";
+    print "<h1>Załadowano!</h1> <h2>Pytania:</h2> <br />";
 
     foreach ($wordsFileContent as $key => $value) {
         $value = trim($value);
@@ -43,21 +44,21 @@
 
         if ($dash_count > 1 || $dash_count == 0)
         {
-            print "<b style='color: red'>Nieprawidłowa składnia w pliku w linijce "
+            print "<h3 style='color: red'>Nieprawidłowa składnia w pliku w linijce "
                 .($key + 1)
-                .": '"
+                .': "'
                 .$value
-                ."': Linijka została pominięta.</b><br />";
+                .'": Linijka została pominięta.</h3><br />';
 
             unset($wordsFileContent[$key]);
             array_keys($wordsFileContent);
         }
         else {
-            print "Pytanie nr."
+            print "<h3>Pytanie nr."
                 .($key + 1)
-                .": '"
+                .': "'
                 .$value
-                ."'<br />";
+                .'"</h3><br />';
         }
             
     }
@@ -67,4 +68,6 @@
 
     ?>
 
-    <a href="./menu.php">Kontynuuj</a>
+    <a href="./menu.php"><button>Kontynuuj</button></a>
+
+    <?php include_once("./includes/footer.php");
