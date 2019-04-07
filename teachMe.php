@@ -32,7 +32,6 @@
         <input type="hidden" name="operation_type" value="teach" />
         <button type="submit" name="learning_type" value="limited">Rozpocznij</button>
     </form>
-    <br />
 
     <div class="popover__wrapper">
         <a href="#">
