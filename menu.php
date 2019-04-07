@@ -18,7 +18,7 @@
                 <p class="--info_text">Przejdź do zakładki <a href="./addFileToLoad.php">Załaduj nowy plik</a>.</p>
         </div>
         <div class="steps__step">
-                <h2>1. Pozwól się przepytać</h2>
+                <h2>3. Pozwól się przepytać</h2>
                 <p class="--info_text">Przejdź do zakładki <a href="./teachMe.php">Ucz mnie</a>, lub <a href="./pollMe.php">Przepytaj mnie</a>.</p>
         </div>
     </div>
