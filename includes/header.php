@@ -26,7 +26,7 @@
                 <div class="header__navigation__option">Załaduj nowy plik</div>
             </a>
             <a href="./textSyntaxTutorial">
-                <div class="header__navigation__option">Instrukcja</div>
+                <div class="header__navigation__option">Instrukcja budowy składni</div>
             </a>
         </nav>
     </header>

@@ -94,7 +94,7 @@ label {
 .--horizontal_center {
     position: absolute;
     left: 50%;
-    width: 100%;
+    width: 70%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
