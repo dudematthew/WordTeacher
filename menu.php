@@ -3,6 +3,8 @@
     include_once("./includes/header.php");
 ?>
 
+<div class="--vertical_center">
+
     <h1>WordLearner v1.4a</h1>
     <h2>Nauka słówek łatwiejsza o połowę</h2>
 
@@ -23,5 +25,6 @@
     <a href="./addFileToLoad.php">
         <button>Spróbuj</button>
     </a>
+</div>
 
 <?php include_once("./includes/footer.php"); ?>
