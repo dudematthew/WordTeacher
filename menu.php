@@ -1,11 +1,12 @@
 <?php
-    $title = "WordTeacher v1.4a";
+    include_once("config.php");
+    $title = "WordTeacher v" . $config["version"] . $config["project-state"];
     include_once("./includes/header.php");
 ?>
 
 <div class="--vertical_center">
 
-    <h1>WordTeacher v1.4a</h1>
+    <h1>WordTeacher v<?php print $config["version"] . $config["project-state"] ?></h1>
     <h2>Nauka słówek łatwiejsza o połowę</h2>
 
     <div class="steps">
