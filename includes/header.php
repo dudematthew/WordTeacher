@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="shortcut icon" href="./img/icon.ico" />
 </head>
+
 <body>
     <header class="header">
         <a href="./menu.php">
@@ -25,7 +27,7 @@
             <a href="./addFileToLoad.php">
                 <div class="header__navigation__option">Załaduj nowy plik</div>
             </a>
-            <a href="./textSyntaxTutorial">
+            <a href="./textSyntaxTutorial.php">
                 <div class="header__navigation__option">Instrukcja budowy składni</div>
             </a>
         </nav>
