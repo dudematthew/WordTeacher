@@ -5,7 +5,7 @@ include_once("./includes/header.php");
 
 <div class="--vertical_center">
 
-    <h1>WordTeacher v1.4a</h1>
+    <h1>WordTeacher v1.5</h1>
     <h2>Nauka słówek łatwiejsza o połowę</h2>
 
     <div class="steps">
